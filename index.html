@@ -4,98 +4,109 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TBY Group – Android Apps</title>
-  <meta name="description" content="TBY Group entwickelt moderne Android-Anwendungen mit Fokus auf Medienverwaltung, Datenschutz und Benutzerfreundlichkeit." />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="TBY Group entwickelt moderne Android-Apps mit Fokus auf Medienverwaltung, Datenschutz und Benutzerfreundlichkeit." />
   <meta name="google-site-verification" content="UXOo0a1jExS0wkRjYbJIsGqi9uH50unDmOgxgjm0qX4" />
   <meta name="google-site-verification" content="HdVKx6P5nhtwmm5IYJJdc6NemTz99-r6y63gHLEX-os" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<nav>
+<nav id="navbar">
   <a href="index.html" class="nav-brand">TBY<span> Group</span></a>
   <ul class="nav-links">
-    <li><a href="index.html" class="active">Start</a></li>
+    <li><a href="#apps">Apps</a></li>
     <li><a href="kontakt.html">Kontakt</a></li>
     <li><a href="impressum.html">Impressum</a></li>
   </ul>
 </nav>
 
-<main>
-  <section class="hero hero-bg">
-    <div class="hero-badge">Android App Studio</div>
-    <h1>Moderne Apps.<br /><span>Kein Tracking.</span><br />Einfach gut.</h1>
-    <p>TBY Group entwickelt Android-Apps mit Fokus auf Medienverwaltung, Datenschutz und Benutzerfreundlichkeit.</p>
-    <a href="https://play.google.com/store/apps/details?id=com.swipegallery.app" target="_blank" rel="noopener" class="btn">
-      ↗ SGallery im Play Store
-    </a>
-    <a href="kontakt.html" class="btn btn-ghost">Kontakt</a>
-  </section>
-
-  <section class="app-section">
-    <div class="section-label">Unsere App</div>
-    <a href="https://play.google.com/store/apps/details?id=com.swipegallery.app" target="_blank" rel="noopener" style="text-decoration:none;">
-      <div class="app-card">
-        <div class="app-icon">🖼️</div>
-        <div class="app-info">
-          <h2>SGallery</h2>
-          <p>Eine leistungsstarke Offline-Galerie für Android – mit privatem Ordner, Foto-Editor und Swipe-Modus zum schnellen Organisieren.</p>
-          <span class="badge-store">▶ Google Play Store</span>
+<!-- HERO -->
+<section class="hero">
+  <div class="stars"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>TBY Group</h1>
+      <p>Moderne Android-Apps mit Fokus auf Datenschutz und Benutzerfreundlichkeit.</p>
+    </div>
+    <div class="hero-phones">
+      <div class="phone phone-back">
+        <div class="phone-screen phone-screen-sound">
+          <div class="sound-meter">
+            <div class="sound-label">dB</div>
+            <div class="sound-value">73.5</div>
+            <div class="sound-bar-container">
+              <div class="sound-bar" style="width:75%; background: linear-gradient(90deg,#4ade80,#facc15,#f87171);"></div>
+            </div>
+            <div class="sound-tags">
+              <span>AVG 62.5</span><span>MAX 88.1</span>
+            </div>
+          </div>
         </div>
       </div>
-    </a>
-  </section>
-
-  <section class="features-section">
-    <div class="section-label">Funktionen</div>
-    <div class="features-grid">
-      <div class="feature-item">
-        <span class="feature-icon">📷</span>
-        <span>Foto- &amp; Videogalerie</span>
-      </div>
-      <div class="feature-item">
-        <span class="feature-icon">🔒</span>
-        <span>Privater Ordner mit PIN-Schutz</span>
-      </div>
-      <div class="feature-item">
-        <span class="feature-icon">👆</span>
-        <span>Swipe-Modus zum Organisieren</span>
-      </div>
-      <div class="feature-item">
-        <span class="feature-icon">🗑️</span>
-        <span>Papierkorb mit Wiederherstellung</span>
-      </div>
-      <div class="feature-item">
-        <span class="feature-icon">⭐</span>
-        <span>Favoriten</span>
-      </div>
-      <div class="feature-item">
-        <span class="feature-icon">✏️</span>
-        <span>Foto-Editor</span>
-      </div>
-      <div class="feature-item">
-        <span class="feature-icon">📵</span>
-        <span>Offline-Nutzung</span>
-      </div>
-      <div class="feature-item">
-        <span class="feature-icon">🚫</span>
-        <span>Keine Registrierung erforderlich</span>
+      <div class="phone phone-front">
+        <div class="phone-screen phone-screen-gallery">
+          <div class="gallery-grid">
+            <div class="gallery-thumb" style="background:#3b3b5c;"></div>
+            <div class="gallery-thumb" style="background:#4a3f5c;"></div>
+            <div class="gallery-thumb" style="background:#2d4a5c;"></div>
+            <div class="gallery-thumb" style="background:#5c3b3b;"></div>
+            <div class="gallery-thumb" style="background:#3b5c3b;"></div>
+            <div class="gallery-thumb" style="background:#5c5c3b;"></div>
+            <div class="gallery-thumb" style="background:#3b4a5c;"></div>
+            <div class="gallery-thumb" style="background:#5c3b4a;"></div>
+            <div class="gallery-thumb" style="background:#4a5c3b;"></div>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
-</main>
+  </div>
+</section>
 
+<!-- APPS -->
+<section class="apps-section" id="apps">
+  <h2>Unsere Apps</h2>
+  <div class="apps-grid">
+
+    <div class="app-card">
+      <div class="app-icon-wrap" style="background: linear-gradient(135deg,#6c63ff,#a78bfa);">🖼️</div>
+      <div class="app-card-name">SGallery</div>
+      <div class="app-card-desc">Leistungsstarke Offline-Galerie mit privatem Ordner, PIN-Schutz, Foto-Editor und Swipe-Modus.</div>
+      <a href="https://play.google.com/store/apps/details?id=com.tbygroup.sgallery" target="_blank" rel="noopener" class="play-btn">
+        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/de_badge_web_generic.png" alt="Jetzt bei Google Play" />
+      </a>
+    </div>
+
+    <div class="app-card">
+      <div class="app-icon-wrap" style="background: linear-gradient(135deg,#ef4444,#f97316);">🔊</div>
+      <div class="app-card-name">Sound Meter</div>
+      <div class="app-card-desc">Echtzeit-Schallpegelmessung mit Diagrammen, Durchschnittswerten und Umgebungsanalyse.</div>
+      <a href="https://play.google.com/store" target="_blank" rel="noopener" class="play-btn">
+        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/de_badge_web_generic.png" alt="Jetzt bei Google Play" />
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section">
+  <h2>Kontakt</h2>
+  <p>Fragen oder Feedback? Schreib uns an <a href="mailto:contact@tby-group.com">contact@tby-group.com</a></p>
+</section>
+
+<!-- FOOTER -->
 <footer>
   <p>
-    &copy; 2026 TBY Group &nbsp;·&nbsp;
     <a href="impressum.html">Impressum</a>
     <a href="datenschutz.html">Datenschutz</a>
     <a href="kontakt.html">Kontakt</a>
   </p>
+  <p style="margin-top:0.75rem;">TBY Group &copy; 2026. Alle Rechte vorbehalten.</p>
 </footer>
 
 <script>
   window.addEventListener('scroll', () => {
-    document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 50);
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
   });
 </script>
 </body>
