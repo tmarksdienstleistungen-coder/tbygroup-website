@@ -43,14 +43,15 @@ nav.scrolled {
   border-bottom: 1px solid var(--border);
 }
 .nav-brand {
-  font-weight: 900;
-  font-size: 1rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--text);
   text-decoration: none;
+  display: flex;
+  align-items: center;
 }
-.nav-brand span { color: #8b85ff; }
+.nav-logo {
+  height: 38px;
+  width: auto;
+  filter: invert(1);
+}
 .nav-links { display: flex; gap: 2rem; list-style: none; }
 .nav-links a {
   color: rgba(255,255,255,0.65);
