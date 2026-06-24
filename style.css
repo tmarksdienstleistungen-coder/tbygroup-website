@@ -132,6 +132,25 @@ nav.scrolled {
   display: block;
 }
 
+.hero-logo-text {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  line-height: 1;
+}
+
+.hero-logo-text span {
+  display: block;
+  font-size: 0.28em;
+  font-weight: 400;
+  letter-spacing: 0.4em;
+  color: rgba(255,255,255,0.6);
+  text-transform: uppercase;
+}
+
 .hero-text p {
   color: rgba(255,255,255,0.65);
   font-size: 1.1rem;
