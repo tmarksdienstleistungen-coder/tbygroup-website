@@ -172,13 +172,13 @@ nav.scrolled {
 }
 
 .hero-sub {
-  font-size: 0.75rem;
+  font-size: 1.1rem;
   font-weight: 500;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.7);
   align-self: flex-end;
-  margin-top: 0.2rem;
+  margin-top: 0.1rem;
 }
 
 .hero-title-wrap {
