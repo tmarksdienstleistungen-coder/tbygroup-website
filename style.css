@@ -206,10 +206,13 @@ nav.scrolled {
 
 /* PHONES */
 .hero-phones {
-  position: relative;
-  width: 340px;
-  height: 480px;
   flex-shrink: 0;
+}
+
+.hero-phones-img {
+  width: 420px;
+  max-width: 100%;
+  display: block;
 }
 
 .phone {
