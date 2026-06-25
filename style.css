@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=DM+Sans:wght@200;300;400;500;600;700&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -151,11 +151,6 @@ nav.scrolled {
 .hero-text { max-width: 480px; }
 
 .hero-text h1 {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: clamp(3rem, 6vw, 5rem);
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
   line-height: 1;
   margin-bottom: 1.2rem;
 }
@@ -185,13 +180,14 @@ nav.scrolled {
 }
 
 .hero-title {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: clamp(2.8rem, 6vw, 5rem);
-  font-weight: 300;
-  letter-spacing: 0.06em;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 3rem;
+  font-weight: 200;
+  letter-spacing: 0.12em;
   color: #fff;
   margin-bottom: 0.4rem;
   line-height: 1.05;
+  white-space: nowrap;
 }
 
 .hero-text p {
