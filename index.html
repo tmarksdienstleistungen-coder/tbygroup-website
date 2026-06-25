@@ -171,12 +171,6 @@ function setLang(lang) {
     const key = el.getAttribute('data-i18n');
     if (t[key] !== undefined) el.innerHTML = t[key];
   });
-  document.querySelectorAll('.play-badge-img').forEach(img => {
-    img.src = t.badge_url;
-    img.alt = t.badge_alt;
-  });
-  const heroBadge = document.getElementById('hero-badge');
-  if (heroBadge) { heroBadge.src = t.badge_url; heroBadge.alt = t.badge_alt; }
   document.querySelectorAll('.lang-switcher-nav button').forEach(b => b.classList.remove('active'));
   document.getElementById('btn-' + lang).classList.add('active');
   document.documentElement.lang = lang;
