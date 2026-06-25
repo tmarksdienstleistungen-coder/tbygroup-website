@@ -177,13 +177,13 @@ nav.scrolled {
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.6);
-  text-align: right;
+  align-self: flex-end;
   margin-top: 0.2rem;
 }
 
 .hero-title-wrap {
-  position: relative;
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: column;
 }
 
 .hero-title {
