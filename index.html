@@ -9,16 +9,49 @@
   <meta name="google-site-verification" content="HdVKx6P5nhtwmm5IYJJdc6NemTz99-r6y63gHLEX-os" />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="favicon.png" />
+  <style>
+    .lang-switcher-nav {
+      display: flex;
+      gap: 0.35rem;
+      align-items: center;
+      margin-left: 1.5rem;
+    }
+    .lang-switcher-nav button {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.25);
+      color: rgba(255,255,255,0.55);
+      border-radius: 4px;
+      padding: 0.2rem 0.55rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .lang-switcher-nav button.active,
+    .lang-switcher-nav button:hover {
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+      border-color: rgba(255,255,255,0.5);
+    }
+  </style>
 </head>
 <body>
 
 <nav id="navbar">
   <a href="index.html" class="nav-brand"><img src="logo-icon.png" alt="TBY Group" class="nav-logo" /></a>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="#apps">Apps</a></li>
-    <li><a href="kontakt.html">Kontakt</a></li>
-  </ul>
+  <div style="display:flex;align-items:center;">
+    <ul class="nav-links">
+      <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+      <li><a href="#apps">Apps</a></li>
+      <li><a href="kontakt.html" data-i18n="nav_contact">Kontakt</a></li>
+    </ul>
+    <div class="lang-switcher-nav">
+      <button onclick="setLang('de')" class="active" id="btn-de">DE</button>
+      <button onclick="setLang('en')" id="btn-en">EN</button>
+      <button onclick="setLang('ru')" id="btn-ru">RU</button>
+    </div>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -31,7 +64,7 @@
         <div class="hero-sub">APPS</div>
       </div>
       <a href="https://play.google.com/store/apps/details?id=com.swipegallery.app&hl=de" target="_blank" rel="noopener" class="hero-play-btn">
-        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/de_badge_web_generic.png" alt="Jetzt bei Google Play" />
+        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/de_badge_web_generic.png" alt="Google Play" id="hero-badge" />
       </a>
     </div>
     <div class="hero-phones">
@@ -42,27 +75,27 @@
 
 <!-- APPS -->
 <section class="apps-section" id="apps">
-  <h2>Unsere Apps</h2>
+  <h2 data-i18n="apps_title">Unsere Apps</h2>
   <div class="apps-grid">
 
     <div class="app-card">
       <div class="app-icon-wrap" style="background:#fff; padding:0; overflow:hidden;"><img src="sgallery-logo.png" alt="SGallery" style="width:100%;height:100%;object-fit:cover;border-radius:16px;" /></div>
       <div class="app-card-name">SGallery – Photo Gallery</div>
-      <div class="app-card-desc">Sichere Galerie App &amp; Foto-Tresor. Bilder offline organisieren, Speicherplatz freigeben und private Fotos sicher verstecken.</div>
+      <div class="app-card-desc" data-i18n="sgallery_desc">Sichere Galerie App &amp; Foto-Tresor. Bilder offline organisieren, Speicherplatz freigeben und private Fotos sicher verstecken.</div>
       <a href="https://play.google.com/store/apps/details?id=com.swipegallery.app&hl=de" target="_blank" rel="noopener" class="play-btn">
-        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/de_badge_web_generic.png" alt="Jetzt bei Google Play" />
+        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/de_badge_web_generic.png" alt="Google Play" class="play-badge-img" />
       </a>
-      <a href="datenschutz.html" class="app-privacy-link">Datenschutzerklärung</a>
+      <a href="datenschutz.html" class="app-privacy-link" data-i18n="privacy_link">Datenschutzerklärung</a>
     </div>
 
     <div class="app-card">
       <div class="app-icon-wrap" style="background:#000; padding:0; overflow:hidden;"><img src="soundmeter-logo.png" alt="Sound Meter" style="width:100%;height:100%;object-fit:cover;border-radius:16px;" /></div>
-      <div class="app-card-name">Schallmessung</div>
-      <div class="app-card-desc">Dezibel (dB) messen leicht gemacht. Der smarte Schallpegelmesser für den Alltag, um sich vor schädlichem Lärm zu schützen.</div>
+      <div class="app-card-name" data-i18n="sound_name">Schallmessung</div>
+      <div class="app-card-desc" data-i18n="sound_desc">Dezibel (dB) messen leicht gemacht. Der smarte Schallpegelmesser für den Alltag, um sich vor schädlichem Lärm zu schützen.</div>
       <a href="https://play.google.com/store" target="_blank" rel="noopener" class="play-btn">
-        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/de_badge_web_generic.png" alt="Jetzt bei Google Play" />
+        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/de_badge_web_generic.png" alt="Google Play" class="play-badge-img" />
       </a>
-      <a href="datenschutz-soundmeter.html" class="app-privacy-link">Datenschutzerklärung</a>
+      <a href="datenschutz-soundmeter.html" class="app-privacy-link" data-i18n="privacy_link">Datenschutzerklärung</a>
     </div>
 
   </div>
@@ -70,23 +103,92 @@
 
 <!-- CONTACT -->
 <section class="contact-section">
-  <h2>Kontakt</h2>
-  <p>Fragen oder Feedback? Schreib uns an <a href="mailto:contact@tby-group.com">contact@tby-group.com</a></p>
+  <h2 data-i18n="contact_title">Kontakt</h2>
+  <p data-i18n="contact_text">Fragen oder Feedback? Schreib uns an <a href="mailto:contact@tby-group.com">contact@tby-group.com</a></p>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <p>
-    <a href="impressum.html">Impressum</a>
-    <a href="kontakt.html">Kontakt</a>
+    <a href="impressum.html" data-i18n="footer_imprint">Impressum</a>
+    <a href="kontakt.html" data-i18n="nav_contact">Kontakt</a>
   </p>
-  <p style="margin-top:0.75rem;">TBY Group &copy; 2026. Alle Rechte vorbehalten.</p>
+  <p style="margin-top:0.75rem;" data-i18n="footer_copy">TBY Group &copy; 2026. Alle Rechte vorbehalten.</p>
 </footer>
 
 <script>
-  window.addEventListener('scroll', () => {
-    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+const translations = {
+  de: {
+    nav_home: 'Home',
+    nav_contact: 'Kontakt',
+    apps_title: 'Unsere Apps',
+    sgallery_desc: 'Sichere Galerie App & Foto-Tresor. Bilder offline organisieren, Speicherplatz freigeben und private Fotos sicher verstecken.',
+    sound_name: 'Schallmessung',
+    sound_desc: 'Dezibel (dB) messen leicht gemacht. Der smarte Schallpegelmesser für den Alltag, um sich vor schädlichem Lärm zu schützen.',
+    privacy_link: 'Datenschutzerklärung',
+    contact_title: 'Kontakt',
+    contact_text: 'Fragen oder Feedback? Schreib uns an <a href="mailto:contact@tby-group.com">contact@tby-group.com</a>',
+    footer_imprint: 'Impressum',
+    footer_copy: 'TBY Group © 2026. Alle Rechte vorbehalten.',
+    badge_url: 'https://play.google.com/intl/en_us/badges/static/images/badges/de_badge_web_generic.png',
+    badge_alt: 'Jetzt bei Google Play',
+  },
+  en: {
+    nav_home: 'Home',
+    nav_contact: 'Contact',
+    apps_title: 'Our Apps',
+    sgallery_desc: 'Secure gallery app & photo vault. Organize images offline, free up storage and safely hide private photos.',
+    sound_name: 'Sound Meter',
+    sound_desc: 'Measure decibels (dB) made easy. The smart sound level meter for everyday life to protect yourself from harmful noise.',
+    privacy_link: 'Privacy Policy',
+    contact_title: 'Contact',
+    contact_text: 'Questions or feedback? Write to us at <a href="mailto:contact@tby-group.com">contact@tby-group.com</a>',
+    footer_imprint: 'Imprint',
+    footer_copy: 'TBY Group © 2026. All rights reserved.',
+    badge_url: 'https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png',
+    badge_alt: 'Get it on Google Play',
+  },
+  ru: {
+    nav_home: 'Главная',
+    nav_contact: 'Контакт',
+    apps_title: 'Наши приложения',
+    sgallery_desc: 'Безопасная галерея и фото-хранилище. Организуйте изображения офлайн, освобождайте память и скрывайте личные фото.',
+    sound_name: 'Измеритель шума',
+    sound_desc: 'Измерение децибел (дБ) стало простым. Умный шумомер для повседневной жизни, чтобы защититься от вредного шума.',
+    privacy_link: 'Политика конфиденциальности',
+    contact_title: 'Контакт',
+    contact_text: 'Вопросы или отзывы? Напишите нам на <a href="mailto:contact@tby-group.com">contact@tby-group.com</a>',
+    footer_imprint: 'Выходные данные',
+    footer_copy: 'TBY Group © 2026. Все права защищены.',
+    badge_url: 'https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png',
+    badge_alt: 'Скачать в Google Play',
+  }
+};
+
+function setLang(lang) {
+  const t = translations[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key] !== undefined) el.innerHTML = t[key];
   });
+  document.querySelectorAll('.play-badge-img').forEach(img => {
+    img.src = t.badge_url;
+    img.alt = t.badge_alt;
+  });
+  const heroBadge = document.getElementById('hero-badge');
+  if (heroBadge) { heroBadge.src = t.badge_url; heroBadge.alt = t.badge_alt; }
+  document.querySelectorAll('.lang-switcher-nav button').forEach(b => b.classList.remove('active'));
+  document.getElementById('btn-' + lang).classList.add('active');
+  document.documentElement.lang = lang;
+  localStorage.setItem('tby-lang', lang);
+}
+
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+});
+
+const saved = localStorage.getItem('tby-lang');
+if (saved && saved !== 'de') setLang(saved);
 </script>
 </body>
 </html>
