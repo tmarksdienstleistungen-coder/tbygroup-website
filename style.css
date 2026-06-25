@@ -178,7 +178,7 @@ nav.scrolled {
   text-transform: uppercase;
   color: rgba(255,255,255,0.7);
   align-self: flex-end;
-  margin-top: 0.1rem;
+  margin-top: -1.2rem;
 }
 
 .hero-title-wrap {
