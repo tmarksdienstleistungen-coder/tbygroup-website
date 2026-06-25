@@ -314,6 +314,8 @@ nav.scrolled {
   width: 280px;
   text-align: left;
   transition: box-shadow 0.2s, transform 0.2s;
+  display: flex;
+  flex-direction: column;
 }
 
 .app-card:hover {
@@ -344,6 +346,7 @@ nav.scrolled {
   color: #666;
   line-height: 1.6;
   margin-bottom: 1.25rem;
+  flex: 1;
 }
 
 .play-btn img {
