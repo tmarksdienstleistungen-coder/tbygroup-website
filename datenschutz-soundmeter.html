@@ -3,9 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Datenschutz Sound Meter – TBY Group</title>
+  <title>Datenschutz Schallmessung – TBY Group</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="favicon.png" />
+  <style>
+    .lang-switcher { display: flex; gap: 0.5rem; margin-bottom: 2rem; }
+    .lang-btn { padding: 0.4rem 1rem; border: 1px solid var(--border); background: transparent; color: var(--muted); border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; transition: all 0.2s; }
+    .lang-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .lang-content { display: none; }
+    .lang-content.active { display: block; }
+  </style>
 </head>
 <body>
 <nav id="navbar" class="scrolled">
@@ -18,53 +25,191 @@
 </nav>
 <main>
   <div class="page-content">
-    <h1>Datenschutzerklärung für Sound Meter</h1>
-    <p class="subtitle">Stand: Juni 2026</p>
-    <h2>1. Verantwortlicher</h2>
-    <p>TBY Group<br />Sponheimer Str. 14<br />55595 Mandel<br />Deutschland<br />E-Mail: <a href="mailto:contact@tby-group.com">contact@tby-group.com</a></p>
-    <h2>2. Allgemeines</h2>
-    <p>Diese Datenschutzerklärung informiert über die Verarbeitung personenbezogener Daten bei der Nutzung der Android-App Sound Meter.</p>
-    <h2>3. Beschreibung der App</h2>
-    <p>Sound Meter ist eine Android-App zur Messung des Umgebungsschallpegels in Dezibel (dB). Die App bietet unter anderem:</p>
-    <ul>
-      <li>Echtzeit-Schallpegelmessung</li>
-      <li>Diagramme und Verlaufsanzeige</li>
-      <li>Durchschnitts- und Maximalwerte</li>
-      <li>Umgebungsanalyse</li>
-    </ul>
-    <h2>4. Mikrofonzugriff</h2>
-    <p>Sound Meter benötigt Zugriff auf das Mikrofon des Geräts, um Schallpegel messen zu können. Die Audioaufnahme wird ausschließlich lokal auf dem Gerät verarbeitet. Es werden keine Audioaufnahmen gespeichert oder an Server übertragen.</p>
-    <h2>5. Lokale Speicherung</h2>
-    <p>Sound Meter speichert App-Einstellungen und Messdaten lokal auf dem Gerät. Es erfolgt keine Registrierung und keine Erstellung eines Benutzerkontos.</p>
-    <h2>6. Google AdMob</h2>
-    <p>Sound Meter kann Werbung über Google AdMob anzeigen. Dabei können durch Google Daten verarbeitet werden, z. B. Geräteinformationen, Werbe-IDs, Nutzungsdaten und ungefähre Standortinformationen.</p>
-    <p>Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
-    <h2>7. Google Firebase</h2>
-    <p>Sound Meter verwendet Google Firebase zur technischen Analyse, Fehlerdiagnose und Verbesserung der App-Stabilität. Dabei können insbesondere folgende Daten verarbeitet werden:</p>
-    <ul>
-      <li>Geräteinformationen</li>
-      <li>App-Version</li>
-      <li>Betriebssystemversion</li>
-      <li>Absturzberichte</li>
-      <li>technische Nutzungsdaten</li>
-      <li>Diagnoseinformationen</li>
-    </ul>
-    <p>Weitere Informationen: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">https://firebase.google.com/support/privacy</a></p>
-    <h2>8. Premium-Funktionen</h2>
-    <p>Sofern kostenpflichtige Funktionen angeboten werden, erfolgt die Zahlungsabwicklung über Google Play.<br />Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
-    <h2>9. Datensicherheit</h2>
-    <p>Wir treffen angemessene technische Maßnahmen zum Schutz der App und ihrer Funktionen. Messdaten verbleiben grundsätzlich auf dem Gerät des Nutzers.</p>
-    <h2>10. Rechte der Nutzer</h2>
-    <p>Nutzer haben im Rahmen der gesetzlichen Vorschriften insbesondere das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Beschwerde bei einer zuständigen Aufsichtsbehörde.</p>
-    <h2>11. Änderungen</h2>
-    <p>Diese Datenschutzerklärung kann bei Bedarf angepasst werden.</p>
-    <h2>12. Kontakt</h2>
-    <p>TBY Group<br />Sponheimer Str. 14<br />55595 Mandel<br />Deutschland<br />E-Mail: <a href="mailto:contact@tby-group.com">contact@tby-group.com</a></p>
+
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLang('de')">DE</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('ru')">RU</button>
+    </div>
+
+    <!-- DEUTSCH -->
+    <div class="lang-content active" id="lang-de">
+      <h1>Datenschutzerklärung für Schallmessung</h1>
+      <p class="subtitle">Stand: Juni 2026</p>
+      <h2>1. Verantwortlicher</h2>
+      <p>TBY Group<br />Sponheimer Str. 14<br />55595 Mandel<br />Deutschland<br />E-Mail: <a href="mailto:contact@tby-group.com">contact@tby-group.com</a></p>
+      <h2>2. Allgemeines</h2>
+      <p>Diese Datenschutzerklärung informiert Sie über die Verarbeitung personenbezogener und technischer Daten bei der Nutzung der Android-App Schallmessung. Der Schutz Ihrer Privatsphäre und Ihrer persönlichen Audiodaten hat für uns höchste Priorität.</p>
+      <h2>3. Beschreibung der App</h2>
+      <p>Schallmessung ist eine App zur Messung und Aufzeichnung von Umgebungsgeräuschen. Die App bietet unter anderem:</p>
+      <ul>
+        <li>Live-Messung des Schallpegels in Dezibel (dB)</li>
+        <li>Live-Audioaufnahme der Umgebungsgeräusche</li>
+        <li>Audioaufzeichnung im Hintergrund</li>
+        <li>Auswertung der Messdaten und Export als PDF-Datei</li>
+        <li>Lokales Speichern, Herunterladen und Teilen von Audio- und PDF-Dateien</li>
+        <li>Dark Mode zur Anpassung der Benutzeroberfläche</li>
+      </ul>
+      <h2>4. Zugriff auf das Mikrofon und Audioaufnahmen (Strikt lokale Verarbeitung)</h2>
+      <p>Um den Schallpegel zu messen und Audioaufnahmen zu erstellen, benötigt die App die Berechtigung, auf das Mikrofon Ihres Geräts zuzugreifen.<br /><strong>Wichtig:</strong> Die Erfassung der Umgebungsgeräusche, die Berechnung der Dezibel-Werte sowie die Audioaufnahme erfolgen zu 100 % lokal auf Ihrem Gerät. Es findet kein Upload, keine Übertragung und keine serverseitige Analyse Ihrer Audiodaten durch die TBY Group statt.</p>
+      <h2>5. Hintergrundaufnahmen</h2>
+      <p>Die App bietet die Möglichkeit, Audioaufnahmen im Hintergrund fortzusetzen. Dieser Vorgang muss von Ihnen aktiv gestartet werden. Auch hierbei werden die Daten ausschließlich lokal auf Ihrem Gerät verarbeitet und gespeichert.</p>
+      <h2>6. Lokale Speicherung, PDF-Export und Teilen von Inhalten</h2>
+      <p>Die App ermöglicht es Ihnen, Messauswertungen als PDF-Dateien sowie Audiodateien lokal zu speichern. Wenn Sie Dateien teilen (z. B. über Messenger oder E-Mail), geschieht dies über Drittanbieter-Apps. Wir haben keinen Zugriff auf diese geteilten Dateien.</p>
+      <h2>7. Einbindung von Drittanbieter-Diensten (Google AdMob)</h2>
+      <p>Zur Finanzierung der kostenfreien App-Version kann Schallmessung Werbung über Google AdMob (Google Ireland Limited) anzeigen. Google verarbeitet dabei technische Daten, darunter:</p>
+      <ul>
+        <li>Geräteinformationen</li>
+        <li>Werbe-IDs (z. B. Google Advertising ID)</li>
+        <li>Technische Nutzungsdaten</li>
+        <li>Ungefähre Standortinformationen</li>
+      </ul>
+      <p>Es werden niemals Audiodaten oder PDF-Auswertungen an Google AdMob übermittelt.<br />Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
+      <h2>8. Analyse und Fehlerbehebung (Google Firebase)</h2>
+      <p>Wir nutzen Google Firebase zur Sicherstellung der App-Stabilität. Dabei werden ausschließlich technische Diagnosedaten verarbeitet:</p>
+      <ul>
+        <li>Geräteinformationen (Modell, Marke)</li>
+        <li>App-Version und Betriebssystemversion</li>
+        <li>Absturzberichte (Crashlytics)</li>
+        <li>Anonymisierte technische Nutzungsdaten</li>
+      </ul>
+      <p>Ihre Mikrofon- und Aufnahmedaten sind von dieser Erfassung strikt ausgeschlossen.<br />Weitere Informationen: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">https://firebase.google.com/support/privacy</a></p>
+      <h2>9. Premium-Funktionen (In-App-Käufe)</h2>
+      <p>Sofern wir kostenpflichtige Funktionen anbieten, erfolgt die Zahlungsabwicklung direkt über den Google Play Store. Die TBY Group erfasst oder speichert keine Zahlungsdaten.</p>
+      <h2>10. Datensicherheit</h2>
+      <p>Da Ihre Audioaufnahmen und PDF-Auswertungen lokal erzeugt und gespeichert werden, liegt die Verantwortung für die Sicherheit dieser Dateien bei Ihnen als Nutzer.</p>
+      <h2>11. Ihre Rechte als Nutzer</h2>
+      <p>Sie haben im Rahmen der DSGVO das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Widerspruch und Beschwerde bei einer Datenschutzaufsichtsbehörde.</p>
+      <h2>12. Änderungen der Datenschutzerklärung</h2>
+      <p>Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf anzupassen.</p>
+      <h2>13. Kontakt</h2>
+      <p>TBY Group<br />Sponheimer Str. 14<br />55595 Mandel<br />Deutschland<br />E-Mail: <a href="mailto:contact@tby-group.com">contact@tby-group.com</a></p>
+    </div>
+
+    <!-- ENGLISH -->
+    <div class="lang-content" id="lang-en">
+      <h1>Privacy Policy for Sound Meter</h1>
+      <p class="subtitle">Last updated: June 2026</p>
+      <h2>1. Controller</h2>
+      <p>TBY Group<br />Sponheimer Str. 14<br />55595 Mandel<br />Germany<br />Email: <a href="mailto:contact@tby-group.com">contact@tby-group.com</a></p>
+      <h2>2. General</h2>
+      <p>This privacy policy informs you about the processing of personal and technical data when using the Android app Sound Meter. Protecting your privacy and personal audio data is our highest priority.</p>
+      <h2>3. App Description</h2>
+      <p>Sound Meter is an app for measuring and recording ambient sounds. Features include:</p>
+      <ul>
+        <li>Live sound level measurement in decibels (dB)</li>
+        <li>Live audio recording of ambient sounds</li>
+        <li>Background audio recording</li>
+        <li>Analysis of measurement data and export as PDF</li>
+        <li>Local saving, downloading and sharing of audio and PDF files</li>
+        <li>Dark mode for UI customization</li>
+      </ul>
+      <h2>4. Microphone Access and Audio Recordings (Strictly Local Processing)</h2>
+      <p>To measure sound levels and create audio recordings, the app requires permission to access your device's microphone.<br /><strong>Important:</strong> The capture of ambient sounds, calculation of decibel values, and audio recording are processed 100% locally on your device. No audio data is uploaded, transmitted, or analyzed server-side by TBY Group.</p>
+      <h2>5. Background Recording</h2>
+      <p>The app offers the option to continue audio recordings in the background. This must be actively started by you. Data is processed and stored exclusively locally on your device.</p>
+      <h2>6. Local Storage, PDF Export and Sharing</h2>
+      <p>The app lets you save measurement reports as PDF files and audio files locally. When you share files (e.g. via messenger or email), this is done through third-party apps. We have no access to these shared files.</p>
+      <h2>7. Third-Party Services (Google AdMob)</h2>
+      <p>To fund the free version, Sound Meter may display ads via Google AdMob (Google Ireland Limited). Google processes technical data including:</p>
+      <ul>
+        <li>Device information</li>
+        <li>Advertising IDs (e.g. Google Advertising ID)</li>
+        <li>Technical usage data</li>
+        <li>Approximate location information</li>
+      </ul>
+      <p>Audio data or PDF reports are never transmitted to Google AdMob.<br />More information: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
+      <h2>8. Analytics and Crash Reporting (Google Firebase)</h2>
+      <p>We use Google Firebase to ensure app stability. Only technical diagnostic data is processed:</p>
+      <ul>
+        <li>Device information (model, brand)</li>
+        <li>App version and OS version</li>
+        <li>Crash reports (Crashlytics)</li>
+        <li>Anonymized technical usage data</li>
+      </ul>
+      <p>Your microphone and recording data are strictly excluded from this collection.<br />More information: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">https://firebase.google.com/support/privacy</a></p>
+      <h2>9. Premium Features (In-App Purchases)</h2>
+      <p>If we offer paid features, all payment processing is handled by the Google Play Store. TBY Group does not collect or store payment data.</p>
+      <h2>10. Data Security</h2>
+      <p>Since your audio recordings and PDF reports are created and stored locally, responsibility for the security of these files rests with you as the user.</p>
+      <h2>11. Your Rights</h2>
+      <p>Under applicable law (GDPR), you have the right to access, rectify, erase, restrict processing, object, and lodge a complaint with a supervisory authority.</p>
+      <h2>12. Changes to This Policy</h2>
+      <p>We reserve the right to update this privacy policy as needed.</p>
+      <h2>13. Contact</h2>
+      <p>TBY Group<br />Sponheimer Str. 14<br />55595 Mandel<br />Germany<br />Email: <a href="mailto:contact@tby-group.com">contact@tby-group.com</a></p>
+    </div>
+
+    <!-- РУССКИЙ -->
+    <div class="lang-content" id="lang-ru">
+      <h1>Политика конфиденциальности для Schallmessung</h1>
+      <p class="subtitle">Актуально: июнь 2026</p>
+      <h2>1. Ответственный</h2>
+      <p>TBY Group<br />Sponheimer Str. 14<br />55595 Mandel<br />Германия<br />E-mail: <a href="mailto:contact@tby-group.com">contact@tby-group.com</a></p>
+      <h2>2. Общие положения</h2>
+      <p>Настоящая политика конфиденциальности информирует вас об обработке данных при использовании Android-приложения Schallmessung. Защита вашей конфиденциальности и аудиоданных является для нас высшим приоритетом.</p>
+      <h2>3. Описание приложения</h2>
+      <p>Schallmessung — приложение для измерения и записи окружающих звуков. Функции включают:</p>
+      <ul>
+        <li>Измерение уровня звука в реальном времени в децибелах (дБ)</li>
+        <li>Живая запись окружающих звуков</li>
+        <li>Запись звука в фоновом режиме</li>
+        <li>Анализ данных измерений и экспорт в PDF</li>
+        <li>Локальное сохранение, загрузка и отправка аудио и PDF-файлов</li>
+        <li>Тёмный режим интерфейса</li>
+      </ul>
+      <h2>4. Доступ к микрофону и аудиозаписи (исключительно локальная обработка)</h2>
+      <p>Для измерения уровня звука приложению необходим доступ к микрофону вашего устройства.<br /><strong>Важно:</strong> Запись звука, вычисление значений децибел и создание аудиозаписей выполняются на 100% локально на вашем устройстве. TBY Group не загружает, не передаёт и не анализирует ваши аудиоданные на серверах.</p>
+      <h2>5. Фоновая запись</h2>
+      <p>Приложение позволяет продолжать аудиозапись в фоновом режиме. Этот процесс должен быть активно запущен вами. Данные обрабатываются и хранятся исключительно локально на вашем устройстве.</p>
+      <h2>6. Локальное хранение, экспорт PDF и отправка файлов</h2>
+      <p>Приложение позволяет сохранять отчёты в формате PDF и аудиофайлы локально. При отправке файлов (например, через мессенджер или e-mail) это происходит через сторонние приложения. Мы не имеем доступа к этим файлам.</p>
+      <h2>7. Сторонние сервисы (Google AdMob)</h2>
+      <p>Для финансирования бесплатной версии приложение может показывать рекламу через Google AdMob (Google Ireland Limited). Google обрабатывает технические данные, в том числе:</p>
+      <ul>
+        <li>Информацию об устройстве</li>
+        <li>Рекламные идентификаторы (Google Advertising ID)</li>
+        <li>Технические данные об использовании</li>
+        <li>Приблизительные данные о местоположении</li>
+      </ul>
+      <p>Аудиоданные и PDF-отчёты никогда не передаются в Google AdMob.<br />Подробнее: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
+      <h2>8. Аналитика и отчёты об ошибках (Google Firebase)</h2>
+      <p>Мы используем Google Firebase для обеспечения стабильности приложения. Обрабатываются только технические диагностические данные:</p>
+      <ul>
+        <li>Информация об устройстве (модель, марка)</li>
+        <li>Версия приложения и версия ОС</li>
+        <li>Отчёты о сбоях (Crashlytics)</li>
+        <li>Анонимизированные технические данные</li>
+      </ul>
+      <p>Ваши данные микрофона и записи строго исключены из этого сбора.<br />Подробнее: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">https://firebase.google.com/support/privacy</a></p>
+      <h2>9. Премиум-функции (внутренние покупки)</h2>
+      <p>Если мы предлагаем платные функции, все платежи обрабатываются через Google Play Store. TBY Group не собирает и не хранит платёжные данные.</p>
+      <h2>10. Безопасность данных</h2>
+      <p>Поскольку ваши аудиозаписи и PDF-отчёты создаются и хранятся локально, ответственность за безопасность этих файлов лежит на вас как пользователе.</p>
+      <h2>11. Ваши права</h2>
+      <p>В соответствии с GDPR вы имеете право на доступ, исправление, удаление, ограничение обработки, возражение и подачу жалобы в надзорный орган.</p>
+      <h2>12. Изменения политики</h2>
+      <p>Мы оставляем за собой право обновлять настоящую политику конфиденциальности по мере необходимости.</p>
+      <h2>13. Контакт</h2>
+      <p>TBY Group<br />Sponheimer Str. 14<br />55595 Mandel<br />Германия<br />E-mail: <a href="mailto:contact@tby-group.com">contact@tby-group.com</a></p>
+    </div>
+
   </div>
 </main>
 <footer>
   <p><a href="impressum.html">Impressum</a><a href="kontakt.html">Kontakt</a></p>
   <p style="margin-top:0.75rem;">TBY Group &copy; 2026. Alle Rechte vorbehalten.</p>
 </footer>
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    event.target.classList.add('active');
+  }
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+  });
+</script>
 </body>
 </html>
