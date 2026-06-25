@@ -351,6 +351,15 @@ nav.scrolled {
   display: block;
 }
 
+.app-privacy-link {
+  display: inline-block;
+  margin-top: 0.6rem;
+  font-size: 0.78rem;
+  color: #999;
+  text-decoration: underline;
+}
+.app-privacy-link:hover { color: #555; }
+
 /* CONTACT */
 .contact-section {
   background: #fff;
