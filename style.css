@@ -171,21 +171,15 @@ nav.scrolled {
   margin-bottom: 0.75rem;
 }
 
-.hero-btn {
+.hero-play-btn {
   display: inline-block;
-  margin-top: 1.8rem;
-  padding: 0.75rem 1.8rem;
-  background: #fff;
-  color: #000;
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: opacity 0.2s;
+  margin-top: 1.5rem;
 }
-.hero-btn:hover { opacity: 0.85; text-decoration: none; }
+.hero-play-btn img {
+  height: 60px;
+  display: block;
+}
+.hero-play-btn:hover { opacity: 0.85; }
 
 .hero-sub {
   font-size: 1.1rem;
