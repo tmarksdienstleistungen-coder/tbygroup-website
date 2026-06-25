@@ -3,73 +3,235 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Datenschutz – TBY Group</title>
+  <title>Datenschutz SGallery – TBY Group</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="favicon.png" />
+  <style>
+    .lang-switcher {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+    .lang-btn {
+      padding: 0.4rem 1rem;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--muted);
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      transition: all 0.2s;
+    }
+    .lang-btn.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+    .lang-content { display: none; }
+    .lang-content.active { display: block; }
+  </style>
 </head>
 <body>
 <nav id="navbar" class="scrolled">
-  <a href="index.html" class="nav-brand"><img src="logo.png" alt="TBY Group" class="nav-logo" /></a>
+  <a href="index.html" class="nav-brand"><img src="logo-icon.png" alt="TBY Group" class="nav-logo" /></a>
   <ul class="nav-links">
-    <li><a href="index.html">Start</a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#apps">Apps</a></li>
     <li><a href="kontakt.html">Kontakt</a></li>
-    <li><a href="impressum.html">Impressum</a></li>
   </ul>
 </nav>
 <main>
   <div class="page-content">
-    <h1>Datenschutzerklärung für SGallery</h1>
-    <p class="subtitle">Stand: Juni 2026</p>
-    <h2>1. Verantwortlicher</h2>
-    <p>TBY Group<br />Sponheimer Str. 14<br />55595 Mandel<br />Deutschland<br />E-Mail: <a href="mailto:contact@tby-group.com">contact@tby-group.com</a></p>
-    <h2>2. Allgemeines</h2>
-    <p>Diese Datenschutzerklärung informiert über die Verarbeitung personenbezogener Daten bei der Nutzung der Android-App SGallery.</p>
-    <h2>3. Beschreibung der App</h2>
-    <p>SGallery ist eine Android-Galerie-App zur Verwaltung, Organisation und Bearbeitung von Fotos und Videos. Die App bietet unter anderem:</p>
-    <ul>
-      <li>Anzeige von Fotos und Videos</li>
-      <li>Swipe-Modus</li>
-      <li>Papierkorb</li>
-      <li>Privatordner mit PIN-Schutz</li>
-      <li>Favoriten</li>
-      <li>Bildbearbeitung</li>
-      <li>Offline-Nutzung</li>
-    </ul>
-    <h2>4. Zugriff auf Fotos und Videos</h2>
-    <p>SGallery benötigt Zugriff auf Fotos und Videos auf dem Gerät, um Medien anzuzeigen, zu verwalten, zu bearbeiten und zu organisieren. Fotos und Videos werden grundsätzlich lokal auf dem Gerät verarbeitet. Eine Übertragung persönlicher Fotos oder Videos an Server von TBY Group erfolgt nicht.</p>
-    <h2>5. Privatordner</h2>
-    <p>Dateien, die in den Privatordner verschoben werden, verbleiben auf dem Gerät des Nutzers und können durch eine PIN geschützt werden.</p>
-    <h2>6. Lokale Speicherung</h2>
-    <p>SGallery speichert App-Einstellungen und Funktionsdaten lokal auf dem Gerät. Es erfolgt keine Registrierung und keine Erstellung eines Benutzerkontos.</p>
-    <h2>7. Google AdMob</h2>
-    <p>SGallery kann Werbung über Google AdMob anzeigen. Dabei können durch Google Daten verarbeitet werden, z. B. Geräteinformationen, Werbe-IDs, Nutzungsdaten und ungefähre Standortinformationen.</p>
-    <p>Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
-    <h2>8. Google Firebase</h2>
-    <p>SGallery verwendet Google Firebase zur technischen Analyse, Fehlerdiagnose und Verbesserung der App-Stabilität. Dabei können insbesondere folgende Daten verarbeitet werden:</p>
-    <ul>
-      <li>Geräteinformationen</li>
-      <li>App-Version</li>
-      <li>Betriebssystemversion</li>
-      <li>Absturzberichte</li>
-      <li>technische Nutzungsdaten</li>
-      <li>Diagnoseinformationen</li>
-    </ul>
-    <p>Weitere Informationen: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">https://firebase.google.com/support/privacy</a></p>
-    <h2>9. Premium-Funktionen</h2>
-    <p>Sofern kostenpflichtige Funktionen angeboten werden, erfolgt die Zahlungsabwicklung über Google Play.<br />Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
-    <h2>10. Datensicherheit</h2>
-    <p>Wir treffen angemessene technische Maßnahmen zum Schutz der App und ihrer Funktionen. Fotos und Videos verbleiben grundsätzlich auf dem Gerät des Nutzers.</p>
-    <h2>11. Rechte der Nutzer</h2>
-    <p>Nutzer haben im Rahmen der gesetzlichen Vorschriften insbesondere das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Beschwerde bei einer zuständigen Aufsichtsbehörde.</p>
-    <h2>12. Änderungen</h2>
-    <p>Diese Datenschutzerklärung kann bei Bedarf angepasst werden.</p>
-    <h2>13. Kontakt</h2>
-    <p>TBY Group<br />Sponheimer Str. 14<br />55595 Mandel<br />Deutschland<br />E-Mail: <a href="mailto:contact@tby-group.com">contact@tby-group.com</a></p>
+
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLang('de')">DE</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('ru')">RU</button>
+    </div>
+
+    <!-- DEUTSCH -->
+    <div class="lang-content active" id="lang-de">
+      <h1>Datenschutzerklärung für SGallery</h1>
+      <p class="subtitle">Stand: Juni 2026</p>
+      <h2>1. Verantwortlicher</h2>
+      <p>TBY Group<br />Sponheimer Str. 14<br />55595 Mandel<br />Deutschland<br />E-Mail: <a href="mailto:contact@tby-group.com">contact@tby-group.com</a></p>
+      <h2>2. Allgemeines</h2>
+      <p>Diese Datenschutzerklärung informiert Sie über die Verarbeitung personenbezogener und technischer Daten bei der Nutzung der Android-App SGallery. Der Schutz Ihrer Privatsphäre und Ihrer persönlichen Medien hat für uns höchste Priorität.</p>
+      <h2>3. Beschreibung der App</h2>
+      <p>SGallery ist eine Android-Galerie-App zur Verwaltung, Organisation und Bearbeitung von Fotos und Videos. Die App bietet unter anderem:</p>
+      <ul>
+        <li>Anzeige und Verwaltung von Fotos und Videos</li>
+        <li>Swipe-Modus zur schnellen Organisation</li>
+        <li>Papierkorb zur Wiederherstellung</li>
+        <li>Privatordner mit PIN-Schutz für sensible Medien</li>
+        <li>Favoriten-Markierung</li>
+        <li>Integrierte Bildbearbeitung</li>
+        <li>Weitgehende Offline-Nutzung der Kernfunktionen</li>
+      </ul>
+      <h2>4. Zugriff auf Fotos und Videos (Strikt lokale Verarbeitung)</h2>
+      <p>SGallery benötigt Zugriff auf den Speicher (Fotos und Videos) Ihres Geräts, um Medien anzuzeigen, zu verwalten, zu bearbeiten und zu organisieren.<br /><strong>Wichtig:</strong> Ihre Fotos und Videos werden zu 100 % lokal auf Ihrem Gerät verarbeitet. Es findet keine Übertragung, kein Upload und keine Analyse Ihrer persönlichen Fotos oder Videos auf Servern der TBY Group oder durch Drittanbieter statt.</p>
+      <h2>5. Privatordner</h2>
+      <p>Medien, die Sie in den Privatordner verschieben, verbleiben ausschließlich auf Ihrem Gerät und werden in einem separaten, PIN-geschützten Bereich verborgen. Wenn Sie die App deinstallieren oder die App-Daten löschen, werden auch diese Dateien dauerhaft vom Gerät entfernt.</p>
+      <h2>6. Lokale Speicherung</h2>
+      <p>SGallery speichert App-Einstellungen (wie z. B. Ihre PIN oder Sortiereinstellungen) und Funktionsdaten rein lokal auf Ihrem Gerät. Es ist keine Registrierung erforderlich und es wird kein Benutzerkonto erstellt.</p>
+      <h2>7. Einbindung von Drittanbieter-Diensten (Google AdMob)</h2>
+      <p>Zur Finanzierung der kostenfreien App-Version kann SGallery Werbung über Google AdMob (Google Ireland Limited) anzeigen. Hierfür benötigt die App eine Internetverbindung. Um personalisierte Werbung auszuspielen und die Leistung von Anzeigen zu messen, verarbeitet Google technische Daten. Dies umfasst unter anderem:</p>
+      <ul>
+        <li>Geräteinformationen</li>
+        <li>Werbe-IDs (z. B. Google Advertising ID)</li>
+        <li>Technische Nutzungsdaten</li>
+        <li>Ungefähre Standortinformationen</li>
+      </ul>
+      <p>Es werden niemals Ihre Fotos, Videos oder Dateinamen an Google AdMob übermittelt.<br />Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
+      <h2>8. Analyse und Fehlerbehebung (Google Firebase)</h2>
+      <p>Um die Stabilität der App zu gewährleisten und technische Fehler schnell zu beheben, nutzen wir Google Firebase (Google Ireland Limited). Dabei werden ausschließlich technische Diagnosedaten verarbeitet, darunter:</p>
+      <ul>
+        <li>Geräteinformationen (Modell, Marke)</li>
+        <li>Verwendete App-Version und Betriebssystemversion</li>
+        <li>Absturzberichte (Crashlytics)</li>
+        <li>Anonymisierte technische Nutzungsdaten</li>
+      </ul>
+      <p>Ihre persönlichen Mediendateien (Fotos/Videos) sind von dieser Erfassung strikt ausgeschlossen.<br />Weitere Informationen: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">https://firebase.google.com/support/privacy</a></p>
+      <h2>9. Premium-Funktionen (In-App-Käufe)</h2>
+      <p>Sofern wir kostenpflichtige Funktionen anbieten, erfolgt die gesamte Zahlungsabwicklung direkt über den Google Play Store. Die TBY Group erfasst oder speichert dabei keine Zahlungsdaten von Ihnen.<br />Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
+      <h2>10. Datensicherheit</h2>
+      <p>Wir treffen angemessene technische und organisatorische Maßnahmen zum Schutz der App und ihrer Funktionen. Da Ihre Fotos und Videos grundsätzlich auf Ihrem Gerät verbleiben, liegt die Verantwortung für die Gerätesicherheit beim Nutzer.</p>
+      <h2>11. Ihre Rechte als Nutzer</h2>
+      <p>Sie haben im Rahmen der DSGVO das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Widerspruch und Beschwerde bei einer Datenschutzaufsichtsbehörde.</p>
+      <h2>12. Änderungen der Datenschutzerklärung</h2>
+      <p>Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf anzupassen.</p>
+      <h2>13. Kontakt</h2>
+      <p>TBY Group<br />Sponheimer Str. 14<br />55595 Mandel<br />Deutschland<br />E-Mail: <a href="mailto:contact@tby-group.com">contact@tby-group.com</a></p>
+    </div>
+
+    <!-- ENGLISH -->
+    <div class="lang-content" id="lang-en">
+      <h1>Privacy Policy for SGallery</h1>
+      <p class="subtitle">Last updated: June 2026</p>
+      <h2>1. Controller</h2>
+      <p>TBY Group<br />Sponheimer Str. 14<br />55595 Mandel<br />Germany<br />Email: <a href="mailto:contact@tby-group.com">contact@tby-group.com</a></p>
+      <h2>2. General</h2>
+      <p>This privacy policy informs you about the processing of personal and technical data when using the Android app SGallery. Protecting your privacy and personal media is our highest priority.</p>
+      <h2>3. App Description</h2>
+      <p>SGallery is an Android gallery app for managing, organizing, and editing photos and videos. Features include:</p>
+      <ul>
+        <li>Display and management of photos and videos</li>
+        <li>Swipe mode for quick organization</li>
+        <li>Recycle bin for recovery</li>
+        <li>Private folder with PIN protection for sensitive media</li>
+        <li>Favorites marking</li>
+        <li>Built-in photo editor</li>
+        <li>Largely offline use of core functions</li>
+      </ul>
+      <h2>4. Access to Photos and Videos (Strictly Local Processing)</h2>
+      <p>SGallery requires access to your device's storage (photos and videos) to display, manage, edit and organize media.<br /><strong>Important:</strong> Your photos and videos are processed 100% locally on your device. No personal photos or videos are transmitted, uploaded or analyzed on TBY Group servers or by third parties.</p>
+      <h2>5. Private Folder</h2>
+      <p>Media moved to the private folder remain exclusively on your device in a separate PIN-protected area. If you uninstall the app or clear app data, these files will be permanently removed from your device.</p>
+      <h2>6. Local Storage</h2>
+      <p>SGallery stores app settings (e.g. your PIN or sorting preferences) and functional data purely locally on your device. No registration is required and no user account is created.</p>
+      <h2>7. Third-Party Services (Google AdMob)</h2>
+      <p>To fund the free version of the app, SGallery may display ads via Google AdMob (Google Ireland Limited). To serve personalized ads and measure ad performance, Google processes technical data including:</p>
+      <ul>
+        <li>Device information</li>
+        <li>Advertising IDs (e.g. Google Advertising ID)</li>
+        <li>Technical usage data</li>
+        <li>Approximate location information</li>
+      </ul>
+      <p>Your photos, videos or file names are never transmitted to Google AdMob.<br />More information: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
+      <h2>8. Analytics and Crash Reporting (Google Firebase)</h2>
+      <p>To ensure app stability and fix technical issues quickly, we use Google Firebase (Google Ireland Limited). Only technical diagnostic data is processed, including:</p>
+      <ul>
+        <li>Device information (model, brand)</li>
+        <li>App version and OS version</li>
+        <li>Crash reports (Crashlytics)</li>
+        <li>Anonymized technical usage data</li>
+      </ul>
+      <p>Your personal media files (photos/videos) are strictly excluded from this collection.<br />More information: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">https://firebase.google.com/support/privacy</a></p>
+      <h2>9. Premium Features (In-App Purchases)</h2>
+      <p>If we offer paid features, all payment processing is handled directly by the Google Play Store. TBY Group does not collect or store any payment data.<br />More information: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
+      <h2>10. Data Security</h2>
+      <p>We take appropriate technical and organizational measures to protect the app and its functions. Since your photos and videos remain on your device, responsibility for device security rests with the user.</p>
+      <h2>11. Your Rights</h2>
+      <p>Under applicable law (especially GDPR), you have the right to access, rectify, erase, restrict processing, object, and lodge a complaint with a supervisory authority.</p>
+      <h2>12. Changes to This Policy</h2>
+      <p>We reserve the right to update this privacy policy as needed to reflect legal requirements or changes to our services.</p>
+      <h2>13. Contact</h2>
+      <p>TBY Group<br />Sponheimer Str. 14<br />55595 Mandel<br />Germany<br />Email: <a href="mailto:contact@tby-group.com">contact@tby-group.com</a></p>
+    </div>
+
+    <!-- РУССКИЙ -->
+    <div class="lang-content" id="lang-ru">
+      <h1>Политика конфиденциальности для SGallery</h1>
+      <p class="subtitle">Актуально: июнь 2026</p>
+      <h2>1. Ответственный</h2>
+      <p>TBY Group<br />Sponheimer Str. 14<br />55595 Mandel<br />Германия<br />E-mail: <a href="mailto:contact@tby-group.com">contact@tby-group.com</a></p>
+      <h2>2. Общие положения</h2>
+      <p>Настоящая политика конфиденциальности информирует вас об обработке персональных и технических данных при использовании Android-приложения SGallery. Защита вашей конфиденциальности и личных медиафайлов является для нас высшим приоритетом.</p>
+      <h2>3. Описание приложения</h2>
+      <p>SGallery — это Android-приложение для управления, организации и редактирования фото и видео. Функции включают:</p>
+      <ul>
+        <li>Просмотр и управление фото и видео</li>
+        <li>Режим свайпа для быстрой организации</li>
+        <li>Корзина для восстановления файлов</li>
+        <li>Приватная папка с PIN-защитой</li>
+        <li>Отметка избранного</li>
+        <li>Встроенный редактор фотографий</li>
+        <li>Работа в основном без интернета</li>
+      </ul>
+      <h2>4. Доступ к фото и видео (исключительно локальная обработка)</h2>
+      <p>SGallery требует доступа к хранилищу вашего устройства для отображения, управления и редактирования медиафайлов.<br /><strong>Важно:</strong> Ваши фото и видео обрабатываются на 100% локально на вашем устройстве. Никакие личные фото или видео не передаются, не загружаются и не анализируются на серверах TBY Group или третьими сторонами.</p>
+      <h2>5. Приватная папка</h2>
+      <p>Медиафайлы, перемещённые в приватную папку, остаются исключительно на вашем устройстве в отдельной зоне с PIN-защитой. При удалении приложения или очистке данных эти файлы также будут удалены с устройства.</p>
+      <h2>6. Локальное хранение</h2>
+      <p>SGallery хранит настройки приложения (например, PIN или параметры сортировки) исключительно локально на вашем устройстве. Регистрация не требуется, учётная запись не создаётся.</p>
+      <h2>7. Сторонние сервисы (Google AdMob)</h2>
+      <p>Для финансирования бесплатной версии приложения SGallery может показывать рекламу через Google AdMob (Google Ireland Limited). Для показа персонализированной рекламы Google обрабатывает технические данные, в том числе:</p>
+      <ul>
+        <li>Информацию об устройстве</li>
+        <li>Рекламные идентификаторы (Google Advertising ID)</li>
+        <li>Технические данные об использовании</li>
+        <li>Приблизительные данные о местоположении</li>
+      </ul>
+      <p>Ваши фото, видео или имена файлов никогда не передаются в Google AdMob.<br />Подробнее: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
+      <h2>8. Аналитика и отчёты об ошибках (Google Firebase)</h2>
+      <p>Для обеспечения стабильности приложения мы используем Google Firebase (Google Ireland Limited). Обрабатываются только технические диагностические данные:</p>
+      <ul>
+        <li>Информация об устройстве (модель, марка)</li>
+        <li>Версия приложения и версия ОС</li>
+        <li>Отчёты о сбоях (Crashlytics)</li>
+        <li>Анонимизированные технические данные</li>
+      </ul>
+      <p>Ваши личные медиафайлы (фото/видео) строго исключены из этого сбора данных.<br />Подробнее: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">https://firebase.google.com/support/privacy</a></p>
+      <h2>9. Премиум-функции (внутренние покупки)</h2>
+      <p>Если мы предлагаем платные функции, все платежи обрабатываются непосредственно через Google Play Store. TBY Group не собирает и не хранит платёжные данные.<br />Подробнее: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
+      <h2>10. Безопасность данных</h2>
+      <p>Мы принимаем соответствующие технические и организационные меры для защиты приложения. Поскольку ваши фото и видео остаются на устройстве, ответственность за безопасность устройства лежит на пользователе.</p>
+      <h2>11. Ваши права</h2>
+      <p>В соответствии с действующим законодательством (GDPR) вы имеете право на доступ, исправление, удаление, ограничение обработки, возражение и подачу жалобы в надзорный орган.</p>
+      <h2>12. Изменения политики</h2>
+      <p>Мы оставляем за собой право обновлять настоящую политику конфиденциальности по мере необходимости.</p>
+      <h2>13. Контакт</h2>
+      <p>TBY Group<br />Sponheimer Str. 14<br />55595 Mandel<br />Германия<br />E-mail: <a href="mailto:contact@tby-group.com">contact@tby-group.com</a></p>
+    </div>
+
   </div>
 </main>
 <footer>
-  <p><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="kontakt.html">Kontakt</a></p>
+  <p><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz SGallery</a><a href="datenschutz-soundmeter.html">Datenschutz Schallmessung</a><a href="kontakt.html">Kontakt</a></p>
   <p style="margin-top:0.75rem;">TBY Group &copy; 2026. Alle Rechte vorbehalten.</p>
 </footer>
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    event.target.classList.add('active');
+  }
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+  });
+</script>
 </body>
 </html>
