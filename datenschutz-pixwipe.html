@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datenschutz PixWipe – TBY Group</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <style>
+    .lang-switcher {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+    .lang-btn {
+      padding: 0.4rem 1rem;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--muted);
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      transition: all 0.2s;
+    }
+    .lang-btn.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+    .lang-content { display: none; }
+    .lang-content.active { display: block; }
+  </style>
+</head>
+<body>
+<nav id="navbar" class="scrolled">
+  <a href="index.html" class="nav-brand"><img src="logo-icon.png" alt="TBY Group" class="nav-logo" /></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#apps">Apps</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
+  </ul>
+</nav>
+<main>
+  <div class="page-content">
+
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLang('de')">DE</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('ru')">RU</button>
+    </div>
+
+    <!-- DEUTSCH -->
+    <div class="lang-content active" id="lang-de">
+      <h1>Datenschutzerklärung für PixWipe – Photo Cleaner</h1>
+      <p class="subtitle">Stand: Juni 2026</p>
+      <h2>1. Verantwortlicher</h2>
+      <p>TBY Group<br />Sponheimer Str. 14<br />55595 Mandel<br />Deutschland<br />E-Mail: <a href="mailto:contact@tby-group.com">contact@tby-group.com</a></p>
+      <h2>2. Allgemeines</h2>
+      <p>Diese Datenschutzerklärung informiert Sie über die Verarbeitung personenbezogener und technischer Daten bei der Nutzung der Android-App PixWipe – Photo Cleaner. Der Schutz Ihrer Privatsphäre und Ihrer persönlichen Medien hat für uns höchste Priorität.</p>
+      <h2>3. Beschreibung der App</h2>
+      <p>PixWipe – Photo Cleaner ist eine Android-App zum schnellen Aussortieren und Organisieren von Fotos per Swipe-Geste. Die App bietet unter anderem:</p>
+      <ul>
+        <li>Schnelles Aussortieren von Bildern per Wisch-Geste</li>
+        <li>Lokale Organisation der Galerie</li>
+        <li>Freigabe von doppeltem Speicherplatz</li>
+        <li>Aufräumen der Galerie im Handumdrehen</li>
+        <li>Weitgehende Offline-Nutzung der Kernfunktionen</li>
+      </ul>
+      <h2>4. Zugriff auf Fotos und Videos (Strikt lokale Verarbeitung)</h2>
+      <p>PixWipe benötigt Zugriff auf den Speicher (Fotos und Videos) Ihres Geräts, um Medien anzuzeigen und zu verwalten.<br /><strong>Wichtig:</strong> Ihre Fotos und Videos werden zu 100 % lokal auf Ihrem Gerät verarbeitet. Es findet keine Übertragung, kein Upload und keine Analyse Ihrer persönlichen Fotos oder Videos auf Servern der TBY Group oder durch Drittanbieter statt.</p>
+      <h2>5. Lokale Speicherung</h2>
+      <p>PixWipe speichert App-Einstellungen und Funktionsdaten rein lokal auf Ihrem Gerät. Es ist keine Registrierung erforderlich und es wird kein Benutzerkonto erstellt.</p>
+      <h2>6. Einbindung von Drittanbieter-Diensten (Google AdMob)</h2>
+      <p>Zur Finanzierung der kostenfreien App-Version kann PixWipe Werbung über Google AdMob (Google Ireland Limited) anzeigen. Hierfür benötigt die App eine Internetverbindung. Um personalisierte Werbung auszuspielen und die Leistung von Anzeigen zu messen, verarbeitet Google technische Daten. Dies umfasst unter anderem:</p>
+      <ul>
+        <li>Geräteinformationen</li>
+        <li>Werbe-IDs (z. B. Google Advertising ID)</li>
+        <li>Technische Nutzungsdaten</li>
+        <li>Ungefähre Standortinformationen</li>
+      </ul>
+      <p>Es werden niemals Ihre Fotos, Videos oder Dateinamen an Google AdMob übermittelt.<br />Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
+      <h2>7. Analyse und Fehlerbehebung (Google Firebase)</h2>
+      <p>Um die Stabilität der App zu gewährleisten und technische Fehler schnell zu beheben, nutzen wir Google Firebase (Google Ireland Limited). Dabei werden ausschließlich technische Diagnosedaten verarbeitet, darunter:</p>
+      <ul>
+        <li>Geräteinformationen (Modell, Marke)</li>
+        <li>Verwendete App-Version und Betriebssystemversion</li>
+        <li>Absturzberichte (Crashlytics)</li>
+        <li>Anonymisierte technische Nutzungsdaten</li>
+      </ul>
+      <p>Ihre persönlichen Mediendateien (Fotos/Videos) sind von dieser Erfassung strikt ausgeschlossen.<br />Weitere Informationen: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">https://firebase.google.com/support/privacy</a></p>
+      <h2>8. Premium-Funktionen (In-App-Käufe)</h2>
+      <p>Sofern wir kostenpflichtige Funktionen anbieten, erfolgt die gesamte Zahlungsabwicklung direkt über den Google Play Store. Die TBY Group erfasst oder speichert dabei keine Zahlungsdaten von Ihnen.<br />Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
+      <h2>9. Datensicherheit</h2>
+      <p>Wir treffen angemessene technische und organisatorische Maßnahmen zum Schutz der App und ihrer Funktionen. Da Ihre Fotos und Videos grundsätzlich auf Ihrem Gerät verbleiben, liegt die Verantwortung für die Gerätesicherheit beim Nutzer.</p>
+      <h2>10. Ihre Rechte als Nutzer</h2>
+      <p>Sie haben im Rahmen der DSGVO das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Widerspruch und Beschwerde bei einer Datenschutzaufsichtsbehörde.</p>
+      <h2>11. Änderungen der Datenschutzerklärung</h2>
+      <p>Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf anzupassen.</p>
+      <h2>12. Kontakt</h2>
+      <p>TBY Group<br />Sponheimer Str. 14<br />55595 Mandel<br />Deutschland<br />E-Mail: <a href="mailto:contact@tby-group.com">contact@tby-group.com</a></p>
+    </div>
+
+    <!-- ENGLISH -->
+    <div class="lang-content" id="lang-en">
+      <h1>Privacy Policy for PixWipe – Photo Cleaner</h1>
+      <p class="subtitle">Last updated: June 2026</p>
+      <h2>1. Controller</h2>
+      <p>TBY Group<br />Sponheimer Str. 14<br />55595 Mandel<br />Germany<br />Email: <a href="mailto:contact@tby-group.com">contact@tby-group.com</a></p>
+      <h2>2. General</h2>
+      <p>This privacy policy informs you about the processing of personal and technical data when using the Android app PixWipe – Photo Cleaner. Protecting your privacy and personal media is our highest priority.</p>
+      <h2>3. App Description</h2>
+      <p>PixWipe – Photo Cleaner is an Android app for quickly sorting and organizing photos using swipe gestures. Features include:</p>
+      <ul>
+        <li>Fast photo sorting using swipe gestures</li>
+        <li>Local gallery organization</li>
+        <li>Free up duplicate storage space</li>
+        <li>Clean up your gallery in no time</li>
+        <li>Largely offline use of core functions</li>
+      </ul>
+      <h2>4. Access to Photos and Videos (Strictly Local Processing)</h2>
+      <p>PixWipe requires access to your device's storage (photos and videos) to display and manage media.<br /><strong>Important:</strong> Your photos and videos are processed 100% locally on your device. No personal photos or videos are transmitted, uploaded or analyzed on TBY Group servers or by third parties.</p>
+      <h2>5. Local Storage</h2>
+      <p>PixWipe stores app settings and functional data purely locally on your device. No registration is required and no user account is created.</p>
+      <h2>6. Third-Party Services (Google AdMob)</h2>
+      <p>To fund the free version of the app, PixWipe may display ads via Google AdMob (Google Ireland Limited). To serve personalized ads and measure ad performance, Google processes technical data including:</p>
+      <ul>
+        <li>Device information</li>
+        <li>Advertising IDs (e.g. Google Advertising ID)</li>
+        <li>Technical usage data</li>
+        <li>Approximate location information</li>
+      </ul>
+      <p>Your photos, videos or file names are never transmitted to Google AdMob.<br />More information: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
+      <h2>7. Analytics and Crash Reporting (Google Firebase)</h2>
+      <p>To ensure app stability and fix technical issues quickly, we use Google Firebase (Google Ireland Limited). Only technical diagnostic data is processed, including:</p>
+      <ul>
+        <li>Device information (model, brand)</li>
+        <li>App version and OS version</li>
+        <li>Crash reports (Crashlytics)</li>
+        <li>Anonymized technical usage data</li>
+      </ul>
+      <p>Your personal media files (photos/videos) are strictly excluded from this collection.<br />More information: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">https://firebase.google.com/support/privacy</a></p>
+      <h2>8. Premium Features (In-App Purchases)</h2>
+      <p>If we offer paid features, all payment processing is handled directly by the Google Play Store. TBY Group does not collect or store any payment data.<br />More information: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
+      <h2>9. Data Security</h2>
+      <p>We take appropriate technical and organizational measures to protect the app and its functions. Since your photos and videos remain on your device, responsibility for device security rests with the user.</p>
+      <h2>10. Your Rights</h2>
+      <p>Under applicable law (especially GDPR), you have the right to access, rectify, erase, restrict processing, object, and lodge a complaint with a supervisory authority.</p>
+      <h2>11. Changes to This Policy</h2>
+      <p>We reserve the right to update this privacy policy as needed to reflect legal requirements or changes to our services.</p>
+      <h2>12. Contact</h2>
+      <p>TBY Group<br />Sponheimer Str. 14<br />55595 Mandel<br />Germany<br />Email: <a href="mailto:contact@tby-group.com">contact@tby-group.com</a></p>
+    </div>
+
+    <!-- РУССКИЙ -->
+    <div class="lang-content" id="lang-ru">
+      <h1>Политика конфиденциальности для PixWipe – Photo Cleaner</h1>
+      <p class="subtitle">Актуально: июнь 2026</p>
+      <h2>1. Ответственный</h2>
+      <p>TBY Group<br />Sponheimer Str. 14<br />55595 Mandel<br />Германия<br />E-mail: <a href="mailto:contact@tby-group.com">contact@tby-group.com</a></p>
+      <h2>2. Общие положения</h2>
+      <p>Настоящая политика конфиденциальности информирует вас об обработке персональных и технических данных при использовании Android-приложения PixWipe – Photo Cleaner. Защита вашей конфиденциальности и личных медиафайлов является для нас высшим приоритетом.</p>
+      <h2>3. Описание приложения</h2>
+      <p>PixWipe – Photo Cleaner — это Android-приложение для быстрой сортировки и организации фотографий с помощью жестов смахивания. Функции включают:</p>
+      <ul>
+        <li>Быстрая сортировка фото жестом смахивания</li>
+        <li>Локальная организация галереи</li>
+        <li>Освобождение дублирующего места хранения</li>
+        <li>Наведение порядка в галерее за считанные минуты</li>
+        <li>Работа в основном без интернета</li>
+      </ul>
+      <h2>4. Доступ к фото и видео (исключительно локальная обработка)</h2>
+      <p>PixWipe требует доступа к хранилищу вашего устройства для отображения и управления медиафайлами.<br /><strong>Важно:</strong> Ваши фото и видео обрабатываются на 100% локально на вашем устройстве. Никакие личные фото или видео не передаются, не загружаются и не анализируются на серверах TBY Group или третьими сторонами.</p>
+      <h2>5. Локальное хранение</h2>
+      <p>PixWipe хранит настройки приложения и функциональные данные исключительно локально на вашем устройстве. Регистрация не требуется, учётная запись не создаётся.</p>
+      <h2>6. Сторонние сервисы (Google AdMob)</h2>
+      <p>Для финансирования бесплатной версии приложения PixWipe может показывать рекламу через Google AdMob (Google Ireland Limited). Для показа персонализированной рекламы Google обрабатывает технические данные, в том числе:</p>
+      <ul>
+        <li>Информацию об устройстве</li>
+        <li>Рекламные идентификаторы (Google Advertising ID)</li>
+        <li>Технические данные об использовании</li>
+        <li>Приблизительные данные о местоположении</li>
+      </ul>
+      <p>Ваши фото, видео или имена файлов никогда не передаются в Google AdMob.<br />Подробнее: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
+      <h2>7. Аналитика и отчёты об ошибках (Google Firebase)</h2>
+      <p>Для обеспечения стабильности приложения мы используем Google Firebase (Google Ireland Limited). Обрабатываются только технические диагностические данные:</p>
+      <ul>
+        <li>Информация об устройстве (модель, марка)</li>
+        <li>Версия приложения и версия ОС</li>
+        <li>Отчёты о сбоях (Crashlytics)</li>
+        <li>Анонимизированные технические данные</li>
+      </ul>
+      <p>Ваши личные медиафайлы (фото/видео) строго исключены из этого сбора данных.<br />Подробнее: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">https://firebase.google.com/support/privacy</a></p>
+      <h2>8. Премиум-функции (внутренние покупки)</h2>
+      <p>Если мы предлагаем платные функции, все платежи обрабатываются непосредственно через Google Play Store. TBY Group не собирает и не хранит платёжные данные.<br />Подробнее: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
+      <h2>9. Безопасность данных</h2>
+      <p>Мы принимаем соответствующие технические и организационные меры для защиты приложения. Поскольку ваши фото и видео остаются на устройстве, ответственность за безопасность устройства лежит на пользователе.</p>
+      <h2>10. Ваши права</h2>
+      <p>В соответствии с действующим законодательством (GDPR) вы имеете право на доступ, исправление, удаление, ограничение обработки, возражение и подачу жалобы в надзорный орган.</p>
+      <h2>11. Изменения политики</h2>
+      <p>Мы оставляем за собой право обновлять настоящую политику конфиденциальности по мере необходимости.</p>
+      <h2>12. Контакт</h2>
+      <p>TBY Group<br />Sponheimer Str. 14<br />55595 Mandel<br />Германия<br />E-mail: <a href="mailto:contact@tby-group.com">contact@tby-group.com</a></p>
+    </div>
+
+  </div>
+</main>
+<footer>
+  <p><a href="impressum.html">Impressum</a><a href="kontakt.html">Kontakt</a></p>
+  <p style="margin-top:0.75rem;">TBY Group &copy; 2026. Alle Rechte vorbehalten.</p>
+</footer>
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    event.target.classList.add('active');
+  }
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+  });
+</script>
+</body>
+</html>

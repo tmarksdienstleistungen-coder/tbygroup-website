@@ -177,6 +177,7 @@ nav.scrolled {
 }
 .hero-play-btn img {
   height: 60px;
+  width: 155px;
   display: block;
 }
 .hero-play-btn:hover { opacity: 0.85; }
@@ -351,6 +352,7 @@ nav.scrolled {
 
 .play-btn img {
   height: 44px;
+  width: 114px;
   display: block;
 }
 
