@@ -485,10 +485,107 @@ footer a:hover { color: var(--text); text-decoration: none; }
 }
 .btn:hover { opacity: 0.85; text-decoration: none; }
 
-@media (max-width: 768px) {
-  .hero-content { flex-direction: column; text-align: center; padding: 7rem 1.5rem 3rem; }
-  .hero-phones { width: 260px; height: 360px; margin: 0 auto; }
-  .phone { width: 150px; height: 300px; }
-  nav { padding: 0 1.5rem; }
-  .nav-links { gap: 1rem; }
+/* TABLET */
+@media (max-width: 900px) {
+  .apps-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 640px;
+  }
+  .hero-phones-img { width: 420px; }
+}
+
+/* MOBILE */
+@media (max-width: 640px) {
+  /* Nav */
+  nav {
+    padding: 0 1.2rem;
+    height: 56px;
+  }
+  .nav-links {
+    gap: 1rem;
+  }
+  .nav-links a {
+    font-size: 0.75rem;
+  }
+
+  /* Hero */
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 5rem 1.5rem 3rem;
+    gap: 2rem;
+  }
+  .hero-text {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-title {
+    font-size: clamp(2.4rem, 13vw, 3.5rem);
+    white-space: nowrap;
+  }
+  .hero-sub {
+    font-size: 0.9rem;
+    margin-top: -0.9rem;
+  }
+  .hero-phones {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .hero-phones-img {
+    width: 100%;
+    max-width: 340px;
+  }
+  .hero-play-btn img {
+    height: 52px;
+    width: 134px;
+  }
+
+  /* Apps */
+  .apps-section {
+    padding: 3rem 1rem;
+  }
+  .apps-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  .apps-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    max-width: 100%;
+  }
+  .app-card {
+    width: 100%;
+    padding: 1.25rem 1rem;
+  }
+  .app-card-name {
+    font-size: 0.95rem;
+  }
+  .app-card-desc {
+    font-size: 0.82rem;
+  }
+  .play-btn img {
+    height: 38px;
+    width: 98px;
+  }
+
+  /* Contact */
+  .contact-section {
+    padding: 3rem 1.2rem;
+  }
+
+  /* Footer */
+  footer {
+    padding: 1.5rem 1rem;
+  }
+
+  /* Subpages */
+  .page-content {
+    padding: 5rem 1.2rem 3rem;
+  }
+  .page-content h1 {
+    font-size: 1.8rem;
+  }
 }
