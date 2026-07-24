@@ -526,11 +526,11 @@ footer a:hover { color: var(--text); text-decoration: none; }
     align-items: center;
   }
   .hero-title {
-    font-size: clamp(2.4rem, 13vw, 3.5rem);
+    font-size: clamp(2rem, 11vw, 3rem);
     white-space: nowrap;
   }
   .hero-sub {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     margin-top: -0.9rem;
   }
   .hero-phones {
@@ -540,28 +540,41 @@ footer a:hover { color: var(--text); text-decoration: none; }
   }
   .hero-phones-img {
     width: 100%;
-    max-width: 340px;
+    max-width: 300px;
   }
   .hero-play-btn img {
     height: 52px;
     width: 134px;
   }
 
-  /* Apps */
+  /* Apps — horizontales Karussell */
   .apps-section {
-    padding: 3rem 1rem;
+    padding: 3rem 0;
   }
   .apps-section h2 {
     font-size: 1.8rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    padding: 0 1.2rem;
   }
   .apps-grid {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    grid-template-columns: unset;
     gap: 1rem;
     max-width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 0.5rem 1.2rem 1.2rem;
+    scrollbar-width: none;
+  }
+  .apps-grid::-webkit-scrollbar {
+    display: none;
   }
   .app-card {
-    width: 100%;
+    flex: 0 0 75vw;
+    max-width: 280px;
+    width: 75vw;
+    scroll-snap-align: start;
     padding: 1.25rem 1rem;
   }
   .app-card-name {
